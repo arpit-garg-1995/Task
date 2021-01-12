@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DishCartTableViewCell" customModule="Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrF-AE-Nip">
+                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="9Ti-mG-l5z"/>
+                            <constraint firstAttribute="width" constant="60" id="9yR-La-SRu"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nPo-kv-wiG">
+                        <rect key="frame" x="8" y="76" width="92" height="116"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-xE-T1R">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="116"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-Uh-kf2">
+                                <rect key="frame" x="50" y="0.0" width="42" height="116"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x7X-Ue-dNa">
+                        <rect key="frame" x="202.5" y="85" width="97.5" height="30"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qld-zD-YU9">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <state key="normal" title="plus"/>
+                                <connections>
+                                    <action selector="counterChage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YKu-hC-lMW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIs-NZ-bnC">
+                                <rect key="frame" x="38" y="5" width="10.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgn-HN-Z9k">
+                                <rect key="frame" x="56.5" y="0.0" width="41" height="30"/>
+                                <state key="normal" title="minus"/>
+                                <connections>
+                                    <action selector="counterChage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bzj-1b-rni"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="x7X-Ue-dNa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yj8-AS-PjD"/>
+                    <constraint firstItem="rrF-AE-Nip" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ZG5-Oi-3hU"/>
+                    <constraint firstItem="nPo-kv-wiG" firstAttribute="top" secondItem="rrF-AE-Nip" secondAttribute="bottom" constant="8" id="c5J-al-cQ8"/>
+                    <constraint firstAttribute="trailing" secondItem="x7X-Ue-dNa" secondAttribute="trailing" constant="20" symbolic="YES" id="ffY-Ks-sDJ"/>
+                    <constraint firstItem="nPo-kv-wiG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kfx-Nm-R68"/>
+                    <constraint firstAttribute="bottom" secondItem="nPo-kv-wiG" secondAttribute="bottom" constant="8" id="qja-aU-Qrm"/>
+                    <constraint firstItem="rrF-AE-Nip" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="yC4-vo-CbK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countlabel" destination="hIs-NZ-bnC" id="FAC-wj-dFp"/>
+                <outlet property="dishImage" destination="rrF-AE-Nip" id="rIm-iB-ayg"/>
+                <outlet property="price" destination="h7R-xE-T1R" id="ivX-PD-aW4"/>
+                <outlet property="rating" destination="gmZ-Uh-kf2" id="sh8-uj-fJN"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="145"/>
+        </tableViewCell>
+    </objects>
+</document>
